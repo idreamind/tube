@@ -76,10 +76,10 @@ body
   padding-top: 55px
 
 footer
-  @include boxShadow( 6px )
   color: $LIGHT-BLACK !important
-  margin-top: 5px
   padding: 10px
+  z-index: 1000 !important
+  border-top: 4px solid $RED
 
 a
   color: $LIGHT-BLACK !important
@@ -91,6 +91,9 @@ a
     background: url('../img/radio/radio%20(#{$i}).jpg') 50% 50% no-repeat
     background-origin: padding-box
     background-size: cover
+
+.fluid-ul
+  background: lighten( $GREY, 50% )
 
 .fluid-li, .fluid-li-8
   @include widthHeightLine( 20%, $H5 )
@@ -114,7 +117,7 @@ a
   text-transform: uppercase
   border-bottom: 5px solid transparent
   &:hover, &:active
-    border-bottom: 5px solid $LIGHT-BLACK !important
+    border-bottom: 5px solid $RED !important
 
 .main-brand, .icon-brand
   font-size: 16pt
@@ -136,10 +139,11 @@ a
   width: 100%
   height: auto
   text-align: center
-  background: url("../img/radio/radio%20(4).jpg")
+  //background: url("../img/radio/radio%20(4).jpg") $LIGHT-BLACK
+  background: $LIGHT-BLACK
+  padding: 20px
 
 .port
-  @include linearGradient
   @include transition
   @include selection
   font-size: 18pt
@@ -147,13 +151,13 @@ a
   height: 100%
   color: transparent
   &:hover
+    @include linearGradient
     color: $WHITE
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.6)
 
 .radio-title
   line-height: normal
-  font-size: 12pt
-  color: $WHITE
+  font-size: 13pt
   padding: 20px 0
   text-transform: uppercase
 
@@ -220,7 +224,6 @@ a
   background: rgba( 255, 0, 0, 0.7 )
   top: -5px
   left: 68.75%
-  z-index: 0
 
 // Contacts: ------------------------------------------------------------------------------
 .row-contacts
@@ -266,7 +269,7 @@ p
   margin: 0
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
-  border-color: $LIGHT-BLACK !important
+  border-color: $RED !important
 
 // Toggle: ------------------------------------------------------------------------------
 .view-big-radio

@@ -10,13 +10,10 @@ body {
   padding-top: 55px; }
 
 footer {
-  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   color: #333333 !important;
-  margin-top: 5px;
-  padding: 10px; }
+  padding: 10px;
+  z-index: 1000 !important;
+  border-top: 4px solid red; }
 
 a {
   color: #333333 !important;
@@ -130,6 +127,9 @@ a {
   background-origin: padding-box;
   background-size: cover; }
 
+.fluid-ul {
+  background: #e6e6e6; }
+
 .fluid-li, .fluid-li-8 {
   width: 20%;
   min-height: 560px;
@@ -168,7 +168,7 @@ a {
   text-transform: uppercase;
   border-bottom: 5px solid transparent; }
   .brand:hover, .brand:active, .main-brand:hover, .main-brand:active, .footer-brand:hover, .footer-brand:active, .icon-brand:hover, .icon-brand:active {
-    border-bottom: 5px solid #333333 !important; }
+    border-bottom: 5px solid red !important; }
 
 .main-brand, .icon-brand {
   font-size: 16pt;
@@ -190,15 +190,10 @@ a {
   width: 100%;
   height: auto;
   text-align: center;
-  background: url("../img/radio/radio%20(4).jpg"); }
+  background: #333333;
+  padding: 20px; }
 
 .port {
-  background: rgba(0, 0, 0, 0.5);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
   transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
@@ -213,13 +208,18 @@ a {
   height: 100%;
   color: transparent; }
   .port:hover {
+    background: rgba(0, 0, 0, 0.5);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.6); }
 
 .radio-title {
   line-height: normal;
-  font-size: 12pt;
-  color: white;
+  font-size: 13pt;
   padding: 20px 0;
   text-transform: uppercase; }
 
@@ -320,8 +320,7 @@ a {
   width: 4px;
   background: rgba(255, 0, 0, 0.7);
   top: -5px;
-  left: 68.75%;
-  z-index: 0; }
+  left: 68.75%; }
 
 .row-contacts {
   background: url("../img/radio/radio%20(4).jpg") bottom right; }
@@ -374,7 +373,7 @@ p:first-letter {
   margin: 0; }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  border-color: #333333 !important; }
+  border-color: red !important; }
 
 .view-big-radio {
   display: block !important;

@@ -1,0 +1,24 @@
+{
+  "name": "tube",
+  "version": "0.1.0",
+  "authors": [
+    "dreamind <kos.voit@gmail.com>"
+  ],
+  "description": "Site for VV",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "tube"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

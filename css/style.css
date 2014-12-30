@@ -1,0 +1,387 @@
+html, body, .wrapper, .fluid-ul {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: white; }
+
+body {
+  padding-top: 55px; }
+
+footer {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  color: #333333 !important;
+  margin-top: 5px;
+  padding: 10px; }
+
+a {
+  color: #333333 !important;
+  text-decoration: none !important; }
+
+.img-radio-1 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(1).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-2 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(2).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-3 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(3).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-4 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(4).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-5 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(5).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-6 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(6).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-7 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(7).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-8 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(8).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-9 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(9).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-10 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(10).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-11 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(11).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.img-radio-12 {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: url("../img/radio/radio%20(12).jpg") 50% 50% no-repeat;
+  background-origin: padding-box;
+  background-size: cover; }
+
+.fluid-li, .fluid-li-8 {
+  width: 20%;
+  min-height: 560px;
+  line-height: 560px;
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden; }
+
+.fluid-li-8 {
+  width: 12.5%;
+  min-height: 20px;
+  line-height: 20px;
+  background: transparent !important;
+  color: black; }
+
+.brand, .main-brand, .footer-brand, .icon-brand {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  background: white !important;
+  color: #333333 !important;
+  text-transform: uppercase;
+  border-bottom: 5px solid transparent; }
+  .brand:hover, .brand:active, .main-brand:hover, .main-brand:active, .footer-brand:hover, .footer-brand:active, .icon-brand:hover, .icon-brand:active {
+    border-bottom: 5px solid #333333 !important; }
+
+.main-brand, .icon-brand {
+  font-size: 16pt;
+  border-bottom: none !important; }
+  .main-brand:hover, .main-brand:active, .icon-brand:hover, .icon-brand:active {
+    border-bottom: none !important; }
+
+.footer-brand, .icon-brand {
+  margin: 10px 10px 20px 10px; }
+
+.icon-brand {
+  font-size: 18pt;
+  padding: 10px;
+  margin: 10px; }
+  .icon-brand:hover, .icon-brand:active {
+    color: black !important; }
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background: url("../img/radio/radio%20(4).jpg"); }
+
+.port {
+  background: rgba(0, 0, 0, 0.5);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 15%, transparent 45%, transparent 100%);
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 18pt;
+  width: 100%;
+  height: 100%;
+  color: transparent; }
+  .port:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.radio-title {
+  line-height: normal;
+  font-size: 12pt;
+  color: white;
+  padding: 20px 0;
+  text-transform: uppercase; }
+
+.radio-description {
+  font-size: 10.5pt;
+  padding: 10px 0;
+  line-height: normal;
+  height: 40px; }
+
+.radio-line {
+  font-size: 16pt;
+  line-height: normal; }
+
+.design-by {
+  vertical-align: top;
+  height: 60px;
+  color: #757575 !important;
+  font-size: 9pt !important; }
+
+.play, .play-particle {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px; }
+
+.play {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  background: white; }
+  .play .fluid-ul {
+    background: rgba(255, 0, 0, 0.5); }
+  .play .row {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    background: url("../img/sgrid.svg") repeat-x; }
+    .play .row span {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      font-size: 11pt;
+      border: 1px solid #666666;
+      color: #666666;
+      background: white;
+      display: inline-block;
+      padding: 0 5px;
+      line-height: normal; }
+
+.city {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  color: white;
+  background: rgba(255, 0, 0, 0.5);
+  display: inline-block;
+  padding: 0 5px; }
+
+.city-selection {
+  -webkit-box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+  -moz-box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+  -ms-box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.8); }
+
+.check-line {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  height: 60px;
+  width: 4px;
+  background: rgba(255, 0, 0, 0.7);
+  top: -5px;
+  left: 68.75%;
+  z-index: 0; }
+
+.row-contacts {
+  background: url("../img/radio/radio%20(4).jpg") bottom right; }
+
+.row-about {
+  background: url("../img/radio/radio%20(4).jpg") top left; }
+
+.contacts {
+  transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  border: 20px solid white;
+  background: white;
+  font-size: 11pt;
+  line-height: 16pt !important; }
+
+p:first-letter {
+  margin: 0 0 0 15px; }
+
+@media all and (min-width: 1280px) and (max-width: 1920px) {
+  .fluid-li {
+    width: 25%;
+    min-height: 480px;
+    line-height: 480px; } }
+@media all and (min-width: 960px) and (max-width: 1280px) {
+  .fluid-li {
+    width: 33.33333%;
+    min-height: 480px;
+    line-height: 480px; } }
+@media all and (min-width: 768px) and (max-width: 960px) {
+  .fluid-li {
+    width: 50%;
+    min-height: 520px;
+    line-height: 520px; } }
+@media all and (max-width: 768px) {
+  .fluid-li {
+    width: 100%;
+    min-height: 620px;
+    line-height: 620px; }
+
+  .contacts {
+    margin: 240px 0 0 0; } }
+.navbar-default {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  background: white;
+  margin: 0; }
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  border-color: #333333 !important; }
+
+.view-big-radio {
+  display: block !important;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100% !important;
+  height: auto !important;
+  border: 5px solid white !important;
+  z-index: 10; }

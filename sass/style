@@ -1,0 +1,280 @@
+// COLORS:
+$GREY:        #666
+$LIGHT-BLACK: #333
+$BLACK:       #000
+$WHITE:       #FFF
+$YELLOW:      #FFFF00
+$ORANGE:      #FF7518
+$CYAN:        #00FFFF
+$MAGENTA:     #FF00FF
+$RED:         #FF0000
+$GREEN:       #00FF00
+
+// SIZE:
+$H5: 560px
+$H4: 480px
+$H3: 480px
+$H2: 520px
+$H1: 620px
+
+@mixin simpleReset()
+  border: none
+  margin: 0
+  padding: 0
+
+@mixin widthHeightLine( $W: 25%, $HL: 400px )
+  width: $W
+  min-height: $HL
+  line-height: $HL
+
+@mixin selection( $C: pointer, $S: none )
+  -webkit-user-select: $S
+  -moz-user-select: $S
+  -ms-user-select: $S
+  user-select: $S
+  cursor: $C
+
+@mixin transition( $T: all 0.3s ease-in-out )
+  transition: $T
+  -o-transition: $T
+  -moz-transition: $T
+  -webkit-transition: $T
+
+@mixin transition( $T: all 300ms ease-in-out )
+  transition: $T
+  -o-transition: $T
+  -moz-transition: $T
+  -webkit-transition: $T
+
+@mixin borderRadius( $R: 10px )
+  -webkit-border-radius: $R
+  -moz-border-radius: $R
+  border-radius: $R
+
+@mixin boxShadow( $RAD: 20px, $A: 0.5, $R: 0, $G: 0, $B: 0 )
+  -webkit-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+  -moz-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+  -ms-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+  box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+
+@mixin linearGradient()
+  background: rgba(0,0,0,0.5)
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%)
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%)
+  background: -o-linear-gradient(top, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%)
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%)
+  background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%, rgba(0,0,0,0) 100%)
+
+// Main: ------------------------------------------------------------------------------
+html, body, .wrapper, .fluid-ul
+  @include simpleReset
+  width: 100%
+  height: 100%
+  background: $WHITE
+
+body
+  padding-top: 55px
+
+footer
+  @include boxShadow( 6px )
+  color: $LIGHT-BLACK !important
+  margin-top: 5px
+  padding: 10px
+
+a
+  color: $LIGHT-BLACK !important
+  text-decoration: none !important
+
+@for $i from 1 through 12
+  .img-radio-#{$i}
+    @include transition
+    background: url('../img/radio/radio%20(#{$i}).jpg') 50% 50% no-repeat
+    background-origin: padding-box
+    background-size: cover
+
+.fluid-li, .fluid-li-8
+  @include widthHeightLine( 20%, $H5 )
+  @include transition
+  @include simpleReset
+  list-style-type: none
+  display: inline-block
+  vertical-align: middle
+  overflow: hidden
+
+.fluid-li-8
+  @include widthHeightLine( 12.5%, 20px )
+  background: transparent !important
+  color: $BLACK
+
+.brand, .main-brand, .footer-brand, .icon-brand
+  @include selection
+  @include transition
+  background: $WHITE !important
+  color: $LIGHT-BLACK !important
+  text-transform: uppercase
+  border-bottom: 5px solid transparent
+  &:hover, &:active
+    border-bottom: 5px solid $LIGHT-BLACK !important
+
+.main-brand, .icon-brand
+  font-size: 16pt
+  border-bottom: none !important
+  &:hover, &:active
+    border-bottom: none !important
+
+.footer-brand, .icon-brand
+  margin: 10px 10px 20px 10px
+
+.icon-brand
+  font-size: 18pt
+  padding: 10px
+  margin: 10px
+  &:hover, &:active
+    color: $BLACK !important
+
+.wrapper
+  width: 100%
+  height: auto
+  text-align: center
+  background: url("../img/radio/radio%20(4).jpg")
+
+.port
+  @include linearGradient
+  @include transition
+  @include selection
+  font-size: 18pt
+  width: 100%
+  height: 100%
+  color: transparent
+  &:hover
+    color: $WHITE
+    background-color: rgba(0, 0, 0, 0.5)
+
+.radio-title
+  line-height: normal
+  font-size: 12pt
+  color: $WHITE
+  padding: 20px 0
+  text-transform: uppercase
+
+.radio-description
+  font-size: 10.5pt
+  padding: 10px 0
+  line-height: normal
+  height: 40px
+
+.radio-line
+  font-size: 16pt
+  line-height: normal
+
+.design-by
+  vertical-align: top
+  height: 60px
+  color: lighten( $GREY, 6% ) !important
+  font-size: 9pt !important
+
+.play, .play-particle
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: 50px
+
+.play
+  @include boxShadow( 6px, 0.5 )
+  background: $WHITE
+  .fluid-ul
+    background: rgba( 255, 0, 0, 0.5 )
+  .row
+    @include selection( default )
+    background: url("../img/sgrid.svg") repeat-x
+    span
+      @include borderRadius( 6px )
+      @include selection
+      font-size: 11pt
+      border: 1px solid $GREY
+      color: $GREY
+      background: $WHITE
+      display: inline-block
+      padding: 0 5px
+      line-height: normal
+
+.city
+  @include transition
+  @include selection
+  color: $WHITE
+  background: rgba( 255, 0, 0, 0.5 )
+  display: inline-block
+  padding: 0 5px
+
+.city-selection
+  @include boxShadow( 10px, 0.8, 255, 69 )
+
+.check-line
+  @include selection
+  @include transition
+  @include boxShadow( 5px, 0.5 )
+  @include borderRadius( 2px )
+  position: absolute
+  height: 60px
+  width: 4px
+  background: rgba( 255, 0, 0, 0.7 )
+  top: -5px
+  left: 68.75%
+  z-index: 0
+
+// Contacts: ------------------------------------------------------------------------------
+.row-contacts
+  background: url("../img/radio/radio%20(4).jpg") bottom right
+
+.row-about
+  background: url("../img/radio/radio%20(4).jpg") top left
+
+.contacts
+  @include transition
+  border: 20px solid $WHITE
+  background: $WHITE
+  font-size: 11pt
+  line-height: 16pt !important
+
+p
+  &:first-letter
+    margin: 0 0 0 15px
+
+// Media: ------------------------------------------------------------------------------
+@media all and (min-width: 1280px) and (max-width: 1920px)
+  .fluid-li
+    @include widthHeightLine( 25%, $H4 )
+
+@media all and (min-width: 960px) and (max-width: 1280px)
+  .fluid-li
+    @include widthHeightLine( 33.333333%, $H3 )
+
+@media all and (min-width: 768px) and (max-width: 960px)
+  .fluid-li
+    @include widthHeightLine( 50%, $H2 )
+
+@media all and (max-width: 768px)
+  .fluid-li
+    @include widthHeightLine( 100%, $H1 )
+  .contacts
+    margin: 240px 0 0 0
+
+// Bootstrap: ------------------------------------------------------------------------------
+.navbar-default
+  @include boxShadow( 6px )
+  background: $WHITE
+  margin: 0
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+  border-color: $LIGHT-BLACK !important
+
+// Toggle: ------------------------------------------------------------------------------
+.view-big-radio
+  display: block !important
+  position: absolute
+  top: 60px
+  left: 0
+  width: 100% !important
+  height: auto !important
+  border: 5px solid $WHITE !important
+  z-index: 10

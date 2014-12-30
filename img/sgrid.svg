@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		width="0.19685in" height="0.19685in" viewBox="0 0 14.1732 14.1732" xml:space="preserve" color-interpolation-filters="sRGB"
+		class="st3">
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none}
+		.st2 {stroke:#666966;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st3 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g>
+		<g id="group4-1" transform="translate(0,-0.57185)">
+			<g id="shape5-2">
+				<path d="M0 14.17 L14.03 14.17 L0 14.17 Z" class="st1"/>
+				<path d="M0 14.17 L14.03 14.17" class="st2"/>
+			</g>
+		</g>
+		<g id="group6-5" transform="translate(-7.15823,13.6063) rotate(-90)">
+			<g id="shape7-6">
+				<path d="M0 14.17 L10.63 14.17 L0 14.17 Z" class="st1"/>
+				<path d="M0 14.17 L10.63 14.17" class="st2"/>
+			</g>
+		</g>
+		<g id="shape8-9" transform="translate(-9.92126,13.6014) rotate(-90)">
+			<path d="M0 14.17 L3.79 14.17" class="st2"/>
+		</g>
+		<g id="shape10-12" transform="translate(-4.25197,13.6014) rotate(-90)">
+			<path d="M0 14.17 L3.79 14.17" class="st2"/>
+		</g>
+		<g id="shape11-15" transform="translate(-12.7559,13.6014) rotate(-90)">
+			<path d="M0 14.17 L3.79 14.17" class="st2"/>
+		</g>
+		<g id="shape12-18" transform="translate(-1.41732,13.6014) rotate(-90)">
+			<path d="M0 14.17 L3.79 14.17" class="st2"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,361 @@
+// COLORS: ------------------------------------------------------------------------------
+$GREY:        #666
+$LIGHT-BLACK: #333
+$BLACK:       #000
+$WHITE:       #FFF
+$YELLOW:      #FFBF00
+$ORANGE:      #FF7518
+$RED:         #FF0030
+$GREEN:       #00FF00
+$SKYPE:       #12A5F4
+$FACEBOOK:    #3B5998
+
+// SIZE: --------------------------------------------------------------------------------
+$H4: 240px    //480
+$H1: 620px
+
+@mixin simpleReset()
+  border: none
+  margin: 0
+  padding: 0
+
+@mixin widthHeightLine( $W: 25%, $HL: 400px )
+  width: $W
+  min-height: $HL
+  line-height: $HL
+
+@mixin selection( $C: pointer, $S: none )
+  -webkit-user-select: $S
+  -moz-user-select: $S
+  -ms-user-select: $S
+  user-select: $S
+  cursor: $C
+
+@mixin transition( $T: all 300ms ease-in-out )
+  transition: $T
+  -o-transition: $T
+  -moz-transition: $T
+  -webkit-transition: $T
+
+@mixin borderRadius( $R: 10px )
+  -webkit-border-radius: $R
+  -moz-border-radius: $R
+  border-radius: $R
+
+@mixin boxShadow( $RAD: 20px, $A: 0.5, $R: 0, $G: 0, $B: 0 )
+  -webkit-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+  -moz-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+  -ms-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+  box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
+
+@mixin bigImg( $W: 100% )
+  display: block !important
+  position: fixed !important
+  top: 60px
+  width: $W
+  height: calc(100% - 105px) !important
+  border: 5px solid $ORANGE !important
+  z-index: 1000
+
+// Main: ------------------------------------------------------------------------------
+html, body, .wrapper, .fluid-ul
+  @include simpleReset
+  width: 100%
+  height: 100%
+  background: $WHITE
+
+body
+  padding-top: 60px
+
+nav
+  border-bottom: $YELLOW solid 5px !important
+
+footer
+  color: $LIGHT-BLACK !important
+  padding: 10px
+  z-index: 1000 !important
+  border-top: 5px solid $RED
+
+a
+  color: $LIGHT-BLACK !important
+  text-decoration: none !important
+
+@for $i from 1 through 12
+  .img-radio-#{$i}
+    background: url('../img/radio/radio%20(#{$i}).jpg') 50% 50% no-repeat
+    background-origin: padding-box
+    background-size: cover
+
+.fluid-ul
+  @include transition
+  background: lighten( $GREY, 50% )
+
+.fluid-li, .fluid-li-8
+  @include transition
+  @include simpleReset
+  list-style-type: none
+  display: inline-block
+  vertical-align: middle
+  overflow: hidden
+
+.fluid-li
+  &:active
+    @include bigImg( calc( 100% - 200px ) )
+
+.fluid-li-8
+  @include widthHeightLine( 12.5%, 20px )
+  background: transparent !important
+  color: $BLACK
+
+.brand, .main-brand, .footer-brand, .icon-brand
+  @include selection
+  @include transition
+  background: $WHITE !important
+  color: $LIGHT-BLACK !important
+  text-transform: uppercase
+  border-bottom: 5px solid transparent
+  &:hover
+    border-bottom: 5px solid $RED !important
+  &:active
+    border-bottom: 5px solid $ORANGE !important
+
+.main-brand, .icon-brand
+  font-size: 16pt
+  border-bottom: none !important
+  &:hover, &:active
+    border-bottom: none !important
+
+.main-brand
+  margin-top: 3px
+
+.footer-brand, .icon-brand
+  margin: 10px 10px 20px 10px
+
+.icon-brand
+  font-size: 18pt
+  padding: 10px
+  margin: 10px
+  &:hover, &:active
+    color: $BLACK !important
+
+.circle-brand
+  @include borderRadius( 24px )
+  display: inline-block !important
+  height: 48px !important
+  width: 48px
+  padding: 9px 10px 10px 10px
+  border: solid 4px $ORANGE !important
+  &:hover
+    border: solid 4px $ORANGE !important
+
+.wrapper
+  width: 100%
+  height: auto
+  text-align: center
+
+.port
+  @include transition
+  @include selection
+  font-size: 18pt
+  width: 100%
+  height: 100%
+  color: transparent
+  &:hover
+    color: $WHITE
+    background-color: rgba(0, 0, 0, 0.6)
+  &:active
+    color: transparent
+    background-color: transparent
+
+.radio-title
+  line-height: normal
+  font-size: 13pt
+  padding: 20px 0
+  text-transform: uppercase
+
+.radio-description
+  @include transition
+  font-size: 10.5pt
+  padding: 10px 0
+  line-height: normal
+  height: 40px
+
+.radio-line
+  font-size: 16pt
+  line-height: normal
+
+.design-by
+  vertical-align: top
+  height: 60px
+  color: lighten( $GREY, 6% ) !important
+  font-size: 9pt !important
+
+.play, .play-particle
+  position: fixed
+  bottom: 0
+  width: 100%
+  height: 45px
+
+.play
+  @include boxShadow( 6px, 0.5 )
+  background: rgba( 66, 66, 66, 0.5 ) //rgba( 200, 255, 255, 0.75 )
+  .fluid-ul
+    background: rgba( 255, 0, 0, 0.5 )
+  .wrapper
+    background: transparent
+  .row
+    @include selection( default )
+    background: url("../img/sgrid.svg") repeat-x transparent
+    span
+      @include borderRadius( 6px )
+      @include selection
+      background: $WHITE
+      font-size: 11pt
+      border: 1px solid $GREY
+      color: $GREY
+      display: inline-block
+      padding: 0 5px
+      line-height: normal
+
+.city
+  @include transition
+  @include selection
+  color: $WHITE
+  background: rgba( 255, 0, 0, 0.5 )
+  display: inline-block
+  padding: 0 5px
+  &:hover
+    border-right: 5px solid $YELLOW
+    border-left: 5px solid $YELLOW
+  &:active
+    border-right: 10px solid $ORANGE !important
+    border-left: 10px solid $ORANGE !important
+
+.city-selection
+  @include boxShadow( 10px, 0.8, 255, 69 )
+
+.check-line
+  @include selection
+  @include transition( all 1s ease-in-out )
+  @include boxShadow( 5px, 0.5 )
+  @include borderRadius( 2px )
+  position: absolute
+  height: 55px
+  width: 4px
+  background: $YELLOW
+
+#layout
+  @include transition
+
+// Check Line: ------------------------------------------------------------------------------
+@for $i from 0 through 7
+  .check-line-city-#{$i}
+    left: 12.5% * $i + 6.25%
+
+// Contacts: ------------------------------------------------------------------------------
+.row-contacts
+  background: url("../img/radio/radio%20(7).jpg") 0 0
+  border-right: 5px solid $SKYPE
+
+.row-about
+  background: url("../img/radio/radio%20(7).jpg") 100% 100%
+  border-left: 5px solid $GREEN
+
+.contacts
+  @include transition
+  border: 20px solid $WHITE
+  background: $WHITE
+  font-size: 11pt
+  line-height: 16pt !important
+
+p
+  &:first-letter
+    margin: 0 0 0 15px
+
+.color-skype, .color-facebook, .color-mail, .color-address, .color-user
+  @include transition
+  @include selection( pointer )
+  border-bottom: 5px solid transparent !important
+  &:hover, &:active
+    border-bottom: 5px solid $SKYPE !important
+    color: $SKYPE !important
+
+.color-facebook
+  &:hover, &:active
+    border-bottom: 5px solid $FACEBOOK !important
+    color: $FACEBOOK !important
+
+.color-mail
+  &:hover, &:active
+    border-bottom: 5px solid $RED !important
+    color: $RED !important
+
+.color-address
+  &:hover, &:active
+    border-bottom: 5px solid $GREEN !important
+    color: $GREEN !important
+
+.color-user
+  &:hover, &:active
+    border-bottom: 5px solid $ORANGE !important
+    color: $ORANGE !important
+
+.center-star
+  display: block !important
+  position: absolute !important
+  right: -25px !important
+  top: -25px !important
+  left: auto !important
+
+// Media: ------------------------------------------------------------------------------
+@media all and ( min-width: 1200px )
+  .fluid-li
+    @include widthHeightLine( 50%, $H4 )
+  #layout
+    border-right: 100px solid $WHITE
+    border-left: 100px solid $WHITE
+
+@media all and (min-width: 768px) and (max-width: 1200px)
+  .fluid-li
+    @include widthHeightLine( 50%, $H4 )
+  #layout
+    border-right: none
+    border-left: none
+  .fluid-li
+    &:active
+      @include bigImg( 100% )
+
+@media all and (max-width: 768px)
+  .fluid-li
+    @include widthHeightLine( 100%, $H1 )
+  .contacts
+    margin: 240px 0 0 0
+  .center-star
+    color: transparent
+  #layout
+    border-right: none
+    border-left: none
+  .fluid-li
+    &:active
+      @include bigImg( 100% )
+
+// Bootstrap: ------------------------------------------------------------------------------
+.navbar-default
+  background: $WHITE
+  margin: 0
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+  border-color: $GREY !important
+
+#toggle
+  @include transition
+  &:hover
+    border-color: $YELLOW !important
+  &:active
+    border-color: $RED !important
+
+.red
+  color: $RED !important
+
+.orange
+  color: $ORANGE !important

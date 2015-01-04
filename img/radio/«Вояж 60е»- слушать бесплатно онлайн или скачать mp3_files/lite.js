@@ -698,7 +698,7 @@ function replaceClass(obj, oldName, newName) {
   addClass(obj, newName);
 }
 
-// Get computed style
+// Get computed style.sass
 function getStyle(elem, name, force) {
   elem = ge(elem);
   if (isArray(name)) { var res = {}; each(name, function(i,v){res[v] = getStyle(elem, v);}); return res; }
@@ -2622,12 +2622,12 @@ function setCookie(name, value, days) {
 function parseLatin(text){
   var outtext = text;
   var lat1 = ['yo','zh','kh','ts','ch','sch','shch','sh','eh','yu','ya','YO','ZH','KH','TS','CH','SCH','SHCH','SH','EH','YU','YA',"'"];
-  var rus1 = ['¸', 'æ', 'õ', 'ö', '÷', 'ù',  'ù',   'ø', 'ý', 'þ', 'ÿ', '¨', 'Æ', 'Õ', 'Ö', '×', 'Ù',  'Ù',   'Ø', 'Ý', 'Þ', 'ß', 'ü'];
+  var rus1 = ['ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½',  'ï¿½',   'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½',  'ï¿½',   'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½', 'ï¿½'];
   for (var i = 0; i < lat1.length; i++) {
     outtext = outtext.split(lat1[i]).join(rus1[i]);
   }
   var lat2 = 'abvgdezijklmnoprstufhcyABVGDEZIJKLMNOPRSTUFHCYÂ¸Â¨';
-  var rus2 = 'àáâãäåçèéêëìíîïðñòóôõöûÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖÛåÅ';
+  var rus2 = 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½';
   for (var i = 0; i < lat2.length; i++) {
     outtext = outtext.split(lat2.charAt(i)).join(rus2.charAt(i));
   }
@@ -2711,7 +2711,7 @@ function placeholderSetup(id, opts) {
   }
   var b1 = el.phcont = el.parentNode.insertBefore(ce('div', {
     className: 'input_back_wrap no_select',
-    innerHTML: '<div class="input_back"><div class="input_back_content' + (o.big ? ' big' : '') + '" style="width: ' + (getSize(el)[0] - 20) + 'px;">' + ph + '</div></div>'
+    innerHTML: '<div class="input_back"><div class="input_back_content' + (o.big ? ' big' : '') + '" style.sass="width: ' + (getSize(el)[0] - 20) + 'px;">' + ph + '</div></div>'
   }), el);
   var b = domFC(b1);
   var c = domFC(b);
@@ -2929,13 +2929,13 @@ function MessageBox(options, dark) {
 
   if (!options.progress) options.progress = 'box_progress' + guid;
 
-  var controlsStyle = options.hideButtons ? ' style="display: none"' : '';
+  var controlsStyle = options.hideButtons ? ' style.sass="display: none"' : '';
   boxContainer = ce('div', {
     className: 'popup_box_container'+(options.dark ? ' box_dark' : ''),
     innerHTML: '\
 <div class="box_layout" onclick="__bq.skip=true;">\
 <div class="box_title_wrap"><div class="box_x_button">'+(options.dark ? getLang('global_close') : '')+'</div><div class="box_title"></div></div>\
-<div class="box_body" style="' + options.bodyStyle + '"></div>\
+<div class="box_body" style.sass="' + options.bodyStyle + '"></div>\
 <div class="box_controls_wrap"' + controlsStyle + '><div class="box_controls">\
 <table cellspacing="0" cellpadding="0" class="fl_r"><tr></tr></table>\
 <div class="progress" id="' + options.progress + '"></div>\
@@ -3441,7 +3441,7 @@ function disableButton(el, disable) {
 
 function sbWidth() {
   if (window._sbWidth === undefined) {
-    var t = ce('div', {innerHTML: '<div style="height: 75px;">1<br>1</div>'}, {
+    var t = ce('div', {innerHTML: '<div style.sass="height: 75px;">1<br>1</div>'}, {
       overflowY: 'scroll',
       position: 'absolute',
       width: '50px',
@@ -3937,7 +3937,7 @@ function boxRefreshCoords(cont) {
 function showDoneBox(msg, opts) {
   opts = opts || {};
   var l = (opts.w || 380) + 20;
-  var style = opts.w ? ' style="width: ' + opts.w + 'px;"' : '';
+  var style = opts.w ? ' style.sass="width: ' + opts.w + 'px;"' : '';
   var pageW = bodyNode.offsetWidth,
       resEl = ce('div', {
       className: 'top_result_baloon_wrap fixed',

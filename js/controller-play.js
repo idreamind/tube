@@ -10,7 +10,7 @@
         .module('tube')
         .controller( 'Play', Play );
 
-    function Play() {
+    function Play( $cookieStore ) {
 
         var vm      = this,
             audio   = document.getElementById('audio'),
@@ -20,7 +20,8 @@
             $check  = $('.check-line'),
             $toggle = $('#toggle'),
             positions  = getPositions(),
-            randomCity = -1;
+            randomCity = -1,
+            tubeMuteState = $cookieStore.get( 'tubeMuteState' ) || 'true';
 
         $toggle.addClass('glyphicon-volume-up orange');
 
@@ -50,24 +51,28 @@
             randomCity = ( randomCity == rC ) ? randCity() : rC;
 
             audio.volume = 0.5;
-            vm.city( randomCity );
+            vm.city(randomCity);
         }
 
         function play() {
             audio.play();
+            tubeMuteState = 'true';
+            $cookieStore.put( 'tubeMuteState', tubeMuteState );
+            toggleMute( tubeMuteState );
         }
 
         function pause() {
             audio.pause();
+            tubeMuteState = 'false';
+            $cookieStore.put( 'tubeMuteState', tubeMuteState );
+            toggleMute( tubeMuteState );
         }
 
         function toggle() {
             if( audio.paused ) {
-                audio.play();
-                $toggle.removeClass('glyphicon-volume-off red').addClass('glyphicon-volume-up orange');
+                vm.play();
             } else {
-                audio.pause();
-                $toggle.removeClass('glyphicon-volume-up orange').addClass('glyphicon-volume-off red');
+                vm.pause();
             }
         }
 
@@ -85,7 +90,12 @@
         // Private:
         function changeSrc( count ) {
             audio.src = srcs[count] + "#0";
-            audio.play();
+
+            if( tubeMuteState === 'true' ) {
+                audio.play();
+            } else {
+                toggleMute( false );
+            }
         }
 
         function getPositions() {
@@ -98,6 +108,14 @@
 
         function randCity() {
             return Math.floor(Math.random() * count);
+        }
+
+        function toggleMute( state ) {
+            if( state === 'true' ) {
+                $toggle.removeClass('glyphicon-volume-off red').addClass('glyphicon-volume-up orange');
+            } else {
+                $toggle.removeClass('glyphicon-volume-up orange').addClass('glyphicon-volume-off red');
+            }
         }
 
         return vm;

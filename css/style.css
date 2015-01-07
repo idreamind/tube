@@ -322,6 +322,12 @@ a {
     background: white !important;
     border-color: #ff7518 !important; }
 
+#view {
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out; }
+
 .check-line-city-0 {
   left: 6.25%; }
 
@@ -367,7 +373,7 @@ a {
 p:first-letter {
   margin: 0 0 0 15px; }
 
-.color-skype, .color-facebook, .color-mail, .color-address, .color-user {
+.color-skype, .color-facebook, .color-mail, .color-address, .color-user, .color-phone {
   transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -378,7 +384,7 @@ p:first-letter {
   user-select: none;
   cursor: pointer;
   border-bottom: 5px solid transparent !important; }
-  .color-skype:hover, .color-skype:active, .color-facebook:hover, .color-facebook:active, .color-mail:hover, .color-mail:active, .color-address:hover, .color-address:active, .color-user:hover, .color-user:active {
+  .color-skype:hover, .color-skype:active, .color-facebook:hover, .color-facebook:active, .color-mail:hover, .color-mail:active, .color-address:hover, .color-address:active, .color-user:hover, .color-user:active, .color-phone:hover, .color-phone:active {
     border-bottom: 5px solid #12a5f4 !important;
     color: #12a5f4 !important; }
 
@@ -398,6 +404,10 @@ p:first-letter {
   border-bottom: 5px solid #ff7518 !important;
   color: #ff7518 !important; }
 
+.color-phone:hover, .color-phone:active {
+  border-bottom: 5px solid #6600ff !important;
+  color: #6600ff !important; }
+
 .center-star {
   display: block !important;
   position: absolute !important;
@@ -415,8 +425,8 @@ p:first-letter {
     line-height: 240px; }
 
   #layout {
-    border-right: 100px solid white;
-    border-left: 100px solid white; } }
+    border-right: 120px solid white;
+    border-left: 120px solid white; } }
 @media all and (min-width: 768px) and (max-width: 1200px) {
   .fluid-li {
     width: 50%;

@@ -1,0 +1,149 @@
+<div id="layout" class="wrapper">
+    <ul class="fluid-ul">
+        <li class="fluid-li img-radio-1" ng-repeat="item in vw.itemsToView" ng-class="item.imgClass">
+            <div class="port">
+                <div class="radio-title">
+                    {{item.title}}
+                </div>
+                <div class="radio-line" ng-show="{{item.type == 'receivers'}}">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>
+                <div class="radio-line" ng-show="{{item.type == 'tesla'}}">&mdash;&emsp;<span class="fa fa-bolt"></span>&emsp;&mdash;</div>
+                <div class="radio-line" ng-show="{{item.type == 'devices'}}">&mdash;&emsp;<span class="fa fa-plug"></span>&emsp;&mdash;</div>
+                <div class="radio-description">
+                    {{item.description}}
+                </div>
+                <span class="glyphicon glyphicon-fullscreen"></span>
+            </div>
+        <!--<li class="fluid-li img-radio-1">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-2">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-3">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-4">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-5">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-6">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-7">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-8">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-9">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-10">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Радиоприёмник-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Замечательный приёмник со своей самобытной историей-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-11">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Катушка Теслы-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-bolt"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Высоковольтный генератор Теслы на исковом промежутке-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+        <!--<li class="fluid-li img-radio-12">-->
+            <!--<div class="port">-->
+                <!--<div class="radio-title">-->
+                    <!--Фонограф-->
+                <!--</div>-->
+                <!--<div class="radio-line">&mdash;&emsp;<span class="fa fa-plug"></span>&emsp;&mdash;</div>-->
+                <!--<div class="radio-description">-->
+                    <!--Уникальный, полностью восстановленный фонограф-->
+                <!--</div>-->
+                <!--<span class="glyphicon glyphicon-fullscreen"></span>-->
+            <!--</div>-->
+    </ul>
+</div>

@@ -1,14 +1,15 @@
 // COLORS: ------------------------------------------------------------------------------
+$WHITE:       #FFF
 $GREY:        #666
 $LIGHT-BLACK: #333
 $BLACK:       #000
-$WHITE:       #FFF
-$YELLOW:      #FFBF00
-$ORANGE:      #FF7518
 $RED:         #FF0030
+$ORANGE:      #FF7518
+$YELLOW:      #FFBF00
 $GREEN:       #00FF00
 $SKYPE:       #12A5F4
 $FACEBOOK:    #3B5998
+$PHONE:       #6600FF
 
 // SIZE: --------------------------------------------------------------------------------
 $H4: 240px    //480
@@ -198,7 +199,7 @@ a
 
 .play
   @include boxShadow( 6px, 0.5 )
-  background: rgba( 66, 66, 66, 0.5 ) //rgba( 200, 255, 255, 0.75 )
+  background: rgba( 66, 66, 66, 0.5 )
   .fluid-ul
     background: rgba( 255, 0, 0, 0.5 )
   .wrapper
@@ -254,6 +255,9 @@ a
     background: $WHITE !important
     border-color: $ORANGE !important
 
+#view
+  @include transition
+
 // Check Line: ------------------------------------------------------------------------------
 @for $i from 0 through 7
   .check-line-city-#{$i}
@@ -279,7 +283,7 @@ p
   &:first-letter
     margin: 0 0 0 15px
 
-.color-skype, .color-facebook, .color-mail, .color-address, .color-user
+.color-skype, .color-facebook, .color-mail, .color-address, .color-user, .color-phone
   @include transition
   @include selection( pointer )
   border-bottom: 5px solid transparent !important
@@ -307,6 +311,11 @@ p
     border-bottom: 5px solid $ORANGE !important
     color: $ORANGE !important
 
+.color-phone
+  &:hover, &:active
+    border-bottom: 5px solid $PHONE !important
+    color: $PHONE !important
+
 .center-star
   display: block !important
   position: absolute !important
@@ -321,8 +330,8 @@ p
   .fluid-li
     @include widthHeightLine( 50%, $H4 )
   #layout
-    border-right: 100px solid $WHITE
-    border-left: 100px solid $WHITE
+    border-right: 120px solid $WHITE
+    border-left: 120px solid $WHITE
 
 @media all and (min-width: 768px) and (max-width: 1200px)
   .fluid-li

@@ -83,17 +83,17 @@ a {
   background-size: cover; }
 
 .fluid-ul {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   background: #e6e6e6; }
 
 .fluid-li, .fluid-li-8 {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   border: none;
   margin: 0;
   padding: 0;
@@ -124,10 +124,10 @@ a {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   background: white !important;
   color: #333333 !important;
   text-transform: uppercase;
@@ -174,10 +174,10 @@ a {
   text-align: center; }
 
 .port {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -201,10 +201,10 @@ a {
   text-transform: uppercase; }
 
 .radio-description {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   font-size: 10.5pt;
   padding: 10px 0;
   line-height: normal;
@@ -261,10 +261,10 @@ a {
       line-height: normal; }
 
 .city {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -293,10 +293,10 @@ a {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
-  transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
+  transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -310,10 +310,17 @@ a {
   background: #ffbf00; }
 
 #layout {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out; }
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out; }
+
+.menu-btn {
+  border: 2px solid #ffbf00 !important;
+  background: white !important; }
+  .menu-btn:hover, .menu-btn:active {
+    background: white !important;
+    border-color: #ff7518 !important; }
 
 .check-line-city-0 {
   left: 6.25%; }
@@ -348,10 +355,10 @@ a {
   border-left: 5px solid lime; }
 
 .contacts {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   border: 20px solid white;
   background: white;
   font-size: 11pt;
@@ -361,10 +368,10 @@ p:first-letter {
   margin: 0 0 0 15px; }
 
 .color-skype, .color-facebook, .color-mail, .color-address, .color-user {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -397,6 +404,9 @@ p:first-letter {
   right: -25px !important;
   top: -25px !important;
   left: auto !important; }
+
+.fa-size {
+  font-size: 17px; }
 
 @media all and (min-width: 1200px) {
   .fluid-li {
@@ -457,10 +467,10 @@ p:first-letter {
   border-color: #666666 !important; }
 
 #toggle {
-  transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -webkit-transition: all 300ms ease-in-out; }
+  transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out; }
   #toggle:hover {
     border-color: #ffbf00 !important; }
   #toggle:active {

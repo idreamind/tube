@@ -31,7 +31,7 @@ $H1: 620px
   user-select: $S
   cursor: $C
 
-@mixin transition( $T: all 300ms ease-in-out )
+@mixin transition( $T: all 200ms ease-in-out )
   transition: $T
   -o-transition: $T
   -moz-transition: $T
@@ -236,7 +236,7 @@ a
 
 .check-line
   @include selection
-  @include transition( all 1s ease-in-out )
+  @include transition( all 500ms ease-in-out )
   @include boxShadow( 5px, 0.5 )
   @include borderRadius( 2px )
   position: absolute
@@ -246,6 +246,13 @@ a
 
 #layout
   @include transition
+
+.menu-btn
+  border: 2px solid $YELLOW !important
+  background: $WHITE !important
+  &:hover, &:active
+    background: $WHITE !important
+    border-color: $ORANGE !important
 
 // Check Line: ------------------------------------------------------------------------------
 @for $i from 0 through 7
@@ -307,6 +314,8 @@ p
   top: -25px !important
   left: auto !important
 
+.fa-size
+  font-size: 17px
 // Media: ------------------------------------------------------------------------------
 @media all and ( min-width: 1200px )
   .fluid-li

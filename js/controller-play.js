@@ -15,10 +15,12 @@
         var vm      = this,
             audio   = document.getElementById('audio'),
             cites   = "check-line-city-", // check-line
-            count   = 7,
+            count   = 8,
+            delay   = 500,
             $check  = $('.check-line'),
             $toggle = $('#toggle'),
-            positions = getPositions();
+            positions  = getPositions(),
+            randomCity = -1;
 
         $toggle.addClass('glyphicon-volume-up orange');
 
@@ -44,7 +46,8 @@
         audio.addEventListener( 'ended', init, true );
 
         function init() {
-            var randomCity = Math.floor( Math.random() * count );
+            var rC = randCity();
+            randomCity = ( randomCity == rC ) ? randCity() : rC;
 
             audio.volume = 0.5;
             vm.city( randomCity );
@@ -69,18 +72,18 @@
         }
 
         function city( count ) {
-
             var line = cites + count;
             $check.removeClass( positions ).addClass( line );
             $toggle.removeClass('glyphicon-volume-off red').addClass('glyphicon-volume-up orange');
 
+            audio.pause();
             setTimeout( function() {
                 changeSrc( count );
-            }, 1000);
+            }, delay);
         }
 
+        // Private:
         function changeSrc( count ) {
-            audio.pause();
             audio.src = srcs[count] + "#0";
             audio.play();
         }
@@ -91,6 +94,10 @@
                 line += " " + cites + i;
             }
             return line;
+        }
+
+        function randCity() {
+            return Math.floor(Math.random() * count);
         }
 
         return vm;

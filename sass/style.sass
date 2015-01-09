@@ -6,7 +6,7 @@ $BLACK:       #000
 $RED:         #FF0030
 $ORANGE:      #FF7518
 $YELLOW:      #FFBF00
-$GREEN:       #00FF00
+$GREEN:       #00DD00
 $SKYPE:       #12A5F4
 $FACEBOOK:    #3B5998
 $PHONE:       #6600FF
@@ -69,6 +69,7 @@ body
   padding-top: 60px
 
 nav
+  @include boxShadow( 7px, 0.75 )
   border-bottom: $YELLOW solid 5px !important
 
 footer
@@ -245,9 +246,6 @@ a
   width: 4px
   background: $YELLOW
 
-#layout
-  @include transition
-
 .menu-btn
   border: 2px solid $YELLOW !important
   background: $WHITE !important
@@ -258,22 +256,32 @@ a
 #view
   @include transition
 
-// Check Line: ------------------------------------------------------------------------------
+#main
+  @include boxShadow( 7px, 0.75 )
+
+// Check Line: ---------------------------------------------------------------------------
 @for $i from 0 through 7
   .check-line-city-#{$i}
     left: 12.5% * $i + 6.25%
 
-// Contacts: ------------------------------------------------------------------------------
+// Author: -------------------------------------------------------------------------------
+#in
+  margin: 40px auto
+
+// Contacts: -----------------------------------------------------------------------------
 .row-contacts
   background: url("../img/radio/radio%20(7).jpg") 0 0
-  border-right: 5px solid $SKYPE
+  border-right: 5px solid $SKYPE !important
+  border-left: 5px solid $WHITE !important
 
 .row-about
   background: url("../img/radio/radio%20(7).jpg") 100% 100%
-  border-left: 5px solid $GREEN
+  border-right: 5px solid $WHITE !important
+  border-left: 5px solid $GREEN !important
 
 .contacts
   @include transition
+  @include boxShadow( 7px, 0.75 )
   border: 20px solid $WHITE
   background: $WHITE
   font-size: 11pt
@@ -316,29 +324,22 @@ p
     border-bottom: 5px solid $PHONE !important
     color: $PHONE !important
 
-.center-star
-  display: block !important
-  position: absolute !important
-  right: -25px !important
-  top: -25px !important
-  left: auto !important
-
 .fa-size
   font-size: 17px
 // Media: ------------------------------------------------------------------------------
 @media all and ( min-width: 1200px )
   .fluid-li
     @include widthHeightLine( 50%, $H4 )
-  #layout
-    border-right: 120px solid $WHITE
-    border-left: 120px solid $WHITE
+  #main
+    width: 90%
+    margin: 0 5%
 
 @media all and (min-width: 768px) and (max-width: 1200px)
   .fluid-li
     @include widthHeightLine( 50%, $H4 )
-  #layout
-    border-right: none
-    border-left: none
+  #main
+    width: 96%
+    margin: 0 2%
   .fluid-li
     &:active
       @include bigImg( 100% )
@@ -350,9 +351,9 @@ p
     margin: 240px 0 0 0
   .center-star
     color: transparent
-  #layout
-    border-right: none
-    border-left: none
+  #main
+    width: calc( 100% - 20px )
+    margin: 0 10px
   .fluid-li
     &:active
       @include bigImg( 100% )
@@ -365,15 +366,28 @@ p
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus
   border-color: $GREY !important
 
-#toggle
-  @include transition
-  &:hover
-    border-color: $YELLOW !important
-  &:active
-    border-color: $RED !important
-
 .red
   color: $RED !important
 
 .orange
   color: $ORANGE !important
+
+.input-group-addon
+  width: 40px !important
+
+.form-control
+  width: 300px !important
+
+.input-group
+  margin: 10px auto
+
+.btn
+  padding: 10px 30px !important
+
+.error, .success
+  @include transition
+  @include boxShadow( 7px, 0.7, 255, 0, 0 )
+  @include borderRadius( 5px )
+
+.success
+  @include boxShadow( 7px, 0.8, 0, 221, 0 )

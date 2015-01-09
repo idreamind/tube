@@ -20,6 +20,11 @@
                 templateUrl:  'html/contacts.html',
                 controller:   'Contacts',
                 controllerAs: 'vc'
+            },
+            pageAuthor = {
+                templateUrl:  'html/author.html',
+                controller:   'Author',
+                controllerAs: 'va'
             };
 
         $routeProvider
@@ -29,6 +34,7 @@
             .when( '/devices',   pageMain )
             .when( '/tesla',     pageMain )
             .when( '/contacts',  pageContacts )
+            .when( '/author',    pageAuthor )
             .otherwise({
                 redirectTo: '/'
             });

@@ -35,7 +35,6 @@
             }
 
             // Set qTip plugin for OUTSIDE plugins:
-            //$('[title!=""]').qtip({
             $('.color-mail').qtip({
                 position: {
                     my: 'left  top',

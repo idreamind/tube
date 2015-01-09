@@ -10,14 +10,26 @@
         .module( 'tube' )
         .controller( 'Global', Global );
 
-    function Global( $route, $routeParams, $location ) {
+    function Global() {
 
-        var vg = this;
+        var vg   = this,
+            body = $("html, body");
 
-        vg.$route = $route;
-        vg.$location = $location;
-        vg.$routeParams = $routeParams;
+        vg.toTop = toTop;
 
+        function toTop() {
+            body.animate(  {scrollTop: 0 }, '500', 'swing' );
+        }
+
+        function resetToggle() {
+            $('.dropdown').hover( function() {
+                $(this).toggleClass('open');
+            }).click( function( event ){
+                event.stopPropagation();
+                window.location = "#/works";
+            });
+        }
+        resetToggle();
     }
 
 })();

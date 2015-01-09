@@ -1,0 +1,30 @@
+<div class="container" id="in">
+    <form class="row text-center">
+        <h3 class="text-center">Вход в режим редактирования</h3>
+        <div class="input-group" id="user">
+            <span class="input-group-addon">U</span>
+            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1"
+                   ng-model="va.user" ng-click="va.clearUser()">
+        </div>
+        <div class="input-group" id="password">
+            <span class="input-group-addon">P</span>
+            <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1"
+                   ng-model="va.password" ng-click="va.clearPass()">
+        </div>
+        <div class="input-group">
+            <div class="checkbox text-center">
+                <label class="btn btn-success" id="man">
+                    <input type="checkbox" ng-model="va.man" ng-click="va.send()">Я не робот
+                </label>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="checkbox text-center">
+                <p>
+                    <input type="button" class="btn btn-success" value="Войти" ng-click="va.send()">
+                    <input type="button" class="btn btn-default" value="Очистить" ng-click="va.clear()">
+                </p>
+            </div>
+        </div>
+    </form>
+</div>

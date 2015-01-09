@@ -79,13 +79,13 @@
             },
             {
                 type: 'tesla',
-                title: 'Радиоприёмник',
+                title: 'Катушка Тесла',
                 description: 'Замечательный приёмник со своей самобытной историей',
                 imgClass: "fluid-li img-radio-11"
             },
             {
                 type: 'devices',
-                title: 'Радиоприёмник',
+                title: 'Фонограф',
                 description: 'Замечательный приёмник со своей самобытной историей',
                 imgClass: "fluid-li img-radio-12"
             }

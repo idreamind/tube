@@ -29,19 +29,17 @@
                     <button type="button" class="navbar-toggle collapsed menu-btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         МЕНЮ
                     </button>
-                    <a class="navbar-brand main-brand" href="#/"><b>retro</b>priemnik</a>
-                    <a class="navbar-brand main-brand circle-brand" href="#/"><span class="glyphicon glyphicon-volume-up"></span></a>
+                    <a class="navbar-brand main-brand" href="#/" ng-click="vg.toTop()"><b>retro</b>priemnik</a>
+                    <a class="navbar-brand main-brand circle-brand" href="#/" ng-click="vg.toTop()"><span class="glyphicon glyphicon-volume-up"></span></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a href="#/works" class="dropdown-toggle brand" data-toggle="dropdown" role="button" aria-expanded="false">НАШИ РАБОТЫ<span class="caret"></span></a>
+                            <a href="#/works" class="dropdown-toggle brand" data-toggle="dropdown" role="button" aria-expanded="false">ВСЕ НАШИ РАБОТЫ<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a class="brand" href="#/receivers"><span class="fa fa-volume-up"></span> ПРИЁМНИКИ</a></li>
-                                <li><a class="brand" href="#/devices"><span class="fa fa-plug"></span> ПРИБОРЫ</a></li>
-                                <li><a class="brand" href="#/tesla"><span class="fa fa-bolt"></span> КАТУШКА ТЕСЛЫ</a></li>
-                                <li class="divider"></li>
-                                <li><a class="brand" href="#/works">ВСЕ</a></li>
+                                <li><a class="brand" href="#/receivers"><span class="fa fa-volume-up"></span>&nbsp;ПРИЁМНИКИ</a></li>
+                                <li><a class="brand" href="#/devices"><span class="fa fa-plug"></span>&nbsp;ПРИБОРЫ</a></li>
+                                <li><a class="brand" href="#/tesla"><span class="fa fa-bolt fa-size"></span>&nbsp;&nbsp;КАТУШКА ТЕСЛЫ</a></li>
                             </ul>
                         </li>
                         <li><a class="brand" href="#/contacts">КОНТАКТЫ</a></li>
@@ -50,12 +48,10 @@
             </div>
         </nav>
     </header>
-
     <div id="view" ng-view></div>
-
     <footer>
         <div class="container text-center">
-            <a href="#" class="text-center main-brand">retro priemnik</a>
+            <a href="#/" class="text-center main-brand">retro priemnik</a>
             <div class="row">
                 <div class="col-sm-12 text-center">
                     Ламповые приёмники &nbsp;&bull;&nbsp; Профессиональная реставрация
@@ -77,7 +73,6 @@
             </div>
         </div>
     </footer>
-
     <div class="play" ng-controller="Play as vm" ng-init="vm.init()">
         <div class="check-line">&nbsp;</div>
         <div class="wrapper">
@@ -117,6 +112,6 @@
     <script src="js/controller-play.js"></script>
     <script src="js/controller-contacts.js"></script>
     <script src="js/controller-work.js"></script>
-
+    <script src="js/controller-author.js"></script>
 </body>
 </html>

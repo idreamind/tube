@@ -21,6 +21,7 @@ $H1: 620px
   padding: 0
 
 @mixin widthHeightLine( $W: 25%, $HL: 400px )
+  outline: none
   width: $W
   min-height: $HL
   line-height: $HL
@@ -69,10 +70,11 @@ body
   padding-top: 60px
 
 nav
-  @include boxShadow( 7px, 0.75 )
+  @include boxShadow( 6px, 0.75 )
   border-bottom: $YELLOW solid 5px !important
 
 footer
+  @include boxShadow( 6px, 0.75 )
   color: $LIGHT-BLACK !important
   padding: 10px
   z-index: 1000 !important
@@ -89,11 +91,12 @@ a
     background-size: cover
 
 .fluid-ul
-  @include transition
+  @include transition( all 500ms ease-in-out )
   background: lighten( $GREY, 50% )
+  padding: 10px 0
 
 .fluid-li, .fluid-li-8
-  @include transition
+  @include transition( all 500ms ease-in-out )
   @include simpleReset
   list-style-type: none
   display: inline-block
@@ -101,8 +104,9 @@ a
   overflow: hidden
 
 .fluid-li
+  @include boxShadow( 6px, 0.75 )
   &:active
-    @include bigImg( calc( 100% - 200px ) )
+    @include bigImg( calc( 90% ) )
 
 .fluid-li-8
   @include widthHeightLine( 12.5%, 20px )
@@ -202,6 +206,7 @@ a
   @include boxShadow( 6px, 0.5 )
   background: rgba( 66, 66, 66, 0.5 )
   .fluid-ul
+    padding: 0
     background: rgba( 255, 0, 0, 0.5 )
   .wrapper
     background: transparent
@@ -257,7 +262,7 @@ a
   @include transition
 
 #main
-  @include boxShadow( 7px, 0.75 )
+  @include boxShadow( 6px, 0.75 )
 
 // Check Line: ---------------------------------------------------------------------------
 @for $i from 0 through 7

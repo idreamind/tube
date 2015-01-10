@@ -32,13 +32,16 @@
         function send() {
             sendState = true;
 
-            if( !va.user || va.user.length < 5 || searcher( va.user ) ) {
+            var user = ( va.user.length > 1 ) ? va.user.trim() : va.user,
+                pass = ( va.password.length > 1 ) ? va.password.trim() : va.password;
+
+            if( !user || user.length < 5 || searcher( user ) ) {
                 juser.removeClass('success').addClass('error');
                 sendState = false;
             } else {
                 juser.removeClass('error').addClass('success');
             }
-            if( !va.password || va.password.length < 7 || searcher( va.user ) ) {
+            if( !pass || pass.length < 7 || searcher( pass ) ) {
                 jpass.removeClass('success').addClass('error');
                 sendState = false;
             } else {
@@ -71,7 +74,7 @@
         }
 
         function searcher( str ) {
-            return !!(str.search(/\s/) != -1 || str.search(/\'/) != -1 || str.search(/\"/) != -1);
+            return str.search( /[\s,\',\"]/ ) != -1;
         }
 
     }

@@ -29,7 +29,7 @@
                     <button type="button" class="navbar-toggle collapsed menu-btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         МЕНЮ
                     </button>
-                    <a class="navbar-brand main-brand" href="#/" ng-click="vg.toTop()"><b>retro</b>priemnik</a>
+                    <a class="navbar-brand main-brand" href="#/" ng-click="vg.toTop()"><b>{{vg.title[0]}}</b>{{vg.title[1]}}</a>
                     <a class="navbar-brand main-brand circle-brand" href="#/" ng-click="vg.toTop()"><span class="glyphicon glyphicon-volume-up"></span></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,20 +49,24 @@
         </nav>
     </header>
     <div id="view" ng-view></div>
+    <div id="img-view" class="nip" ng-click="vg.removeBigImg()">
+        <p class="text-center">
+            <span class="fa fa-close fa-size"></span>&nbsp;'click'
+        </p>
+        <img src="{{vg.srcBigImg}}" alt="">
+    </div>
     <footer>
         <div class="container text-center">
-            <a href="#/" class="text-center main-brand">retro priemnik</a>
+            <a href="#/" class="text-center main-brand">{{vg.title[0]}}&nbsp;{{vg.title[1]}}</a>
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    Ламповые приёмники &nbsp;&bull;&nbsp; Профессиональная реставрация
+                    {{vg.slogan[0]}}&nbsp;&nbsp;&bull;&nbsp;&nbsp;{{vg.slogan[1]}}
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="text-center">
-                    <a href="skype:SkypeUser?chat" class="icon-brand color-skype"><span class="fa fa-skype"></span></a>
-                    <a href="https://www.facebook.com/profile.php?id=100001722759506" class="icon-brand color-facebook"><span class="fa fa-facebook-square"></span></a>
-                    <a href="mailto:arcam@tut.by?subject=Ретро Приёмник" class="icon-brand color-mail"><span class="fa fa-at"></span></a>
+                    <a ng-repeat="link in vg.links" href="{{link.ref}}" class="{{link.style}}"><span class="{{link.icon}}"></span></a>
                 </div>
             </div>
             <hr>
@@ -106,6 +110,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="js/qtip/jquery.qtip.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controller-global.js"></script>

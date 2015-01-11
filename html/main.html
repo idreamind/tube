@@ -1,6 +1,9 @@
 <div id="main" class="wrapper">
     <ul class="fluid-ul">
-        <li class="fluid-li img-radio-1" ng-repeat="item in vw.itemsToView" ng-class="item.imgClass">
+        <li class="fluid-li fluid-li-animation img-radio-1"
+                                        ng-repeat="item in vw.itemsToView"
+                                        ng-class="item.imgClass"
+                                        ng-click="vg.setBigImg( item.src )">
             <div class="port">
                 <div class="radio-title">
                     {{item.title}}

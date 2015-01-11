@@ -6,7 +6,8 @@
 
     angular
         .module( 'tube', [ 'ngRoute',
-                            'ngCookies' ] )
+                            'ngCookies',
+                            'ngAnimate' ] )
         .config( config );
 
     function config( $routeProvider, $locationProvider ) {

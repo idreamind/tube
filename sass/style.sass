@@ -91,8 +91,7 @@ a
     background-size: cover
 
 .fluid-ul
-  @include transition( all 500ms ease-in-out )
-  background: lighten( $GREY, 50% )
+  background: $YELLOW
   padding: 10px 0
 
 .fluid-li, .fluid-li-8
@@ -104,9 +103,8 @@ a
   overflow: hidden
 
 .fluid-li
+  @include transition( all 500ms ease-in-out )
   @include boxShadow( 6px, 0.75 )
-  &:active
-    @include bigImg( calc( 90% ) )
 
 .fluid-li-8
   @include widthHeightLine( 12.5%, 20px )
@@ -200,7 +198,7 @@ a
   position: fixed
   bottom: 0
   width: 100%
-  height: 45px
+  height: 40px
 
 .play
   @include boxShadow( 6px, 0.5 )
@@ -247,7 +245,7 @@ a
   @include boxShadow( 5px, 0.5 )
   @include borderRadius( 2px )
   position: absolute
-  height: 55px
+  height: 50px
   width: 4px
   background: $YELLOW
 
@@ -263,6 +261,55 @@ a
 
 #main
   @include boxShadow( 6px, 0.75 )
+
+#img-view
+  @include transition( all 600ms ease-in-out )
+  @include simpleReset
+  overflow: hidden
+  background: $YELLOW
+  position: fixed !important
+  z-index: 9000
+  color: $WHITE
+
+.nip
+  @include borderRadius( 300px )
+  @include boxShadow( 6px, 0.75 )
+  top: 50%
+  left: 50%
+  height: 0%
+  width: 0%
+  p
+    @include selection( pointer )
+    font-size: 16px
+    padding-top: 10px
+  img
+    @include transition( all 600ms ease-in-out )
+    @include borderRadius( 300px )
+    @include boxShadow( 6px, 0.75 )
+    height: 50%
+    width: 50%
+    display: block !important
+    margin: auto
+
+.expand-img-h
+  img
+    @include borderRadius( 3px )
+    height: 94% !important
+    width: auto !important
+
+.expand-img-w
+  img
+    @include borderRadius( 3px )
+    width: 95% !important
+    height: auto !important
+
+.expand
+  @include borderRadius( 0px )
+  top: calc( 0% + 60px )
+  left: 0%
+  height: calc( 100% - 100px ) !important
+  width: 100%
+
 
 // Check Line: ---------------------------------------------------------------------------
 @for $i from 0 through 7
@@ -345,9 +392,6 @@ p
   #main
     width: 96%
     margin: 0 2%
-  .fluid-li
-    &:active
-      @include bigImg( 100% )
 
 @media all and (max-width: 768px)
   .fluid-li
@@ -359,9 +403,6 @@ p
   #main
     width: calc( 100% - 20px )
     margin: 0 10px
-  .fluid-li
-    &:active
-      @include bigImg( 100% )
 
 // Bootstrap: ------------------------------------------------------------------------------
 .navbar-default

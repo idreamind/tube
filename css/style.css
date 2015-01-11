@@ -91,11 +91,7 @@ a {
   background-size: cover; }
 
 .fluid-ul {
-  transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -webkit-transition: all 500ms ease-in-out;
-  background: #e6e6e6;
+  background: #ffbf00;
   padding: 10px 0; }
 
 .fluid-li, .fluid-li-8 {
@@ -112,18 +108,14 @@ a {
   overflow: hidden; }
 
 .fluid-li {
+  transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
   -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.75); }
-  .fluid-li:active {
-    display: block !important;
-    position: fixed !important;
-    top: 60px;
-    width: calc(90% );
-    height: calc(100% - 105px) !important;
-    border: 5px solid #ff7518 !important;
-    z-index: 1000; }
 
 .fluid-li-8 {
   outline: none;
@@ -239,7 +231,7 @@ a {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 45px; }
+  height: 40px; }
 
 .play {
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
@@ -321,7 +313,7 @@ a {
   -moz-border-radius: 2px;
   border-radius: 2px;
   position: absolute;
-  height: 55px;
+  height: 50px;
   width: 4px;
   background: #ffbf00; }
 
@@ -343,6 +335,80 @@ a {
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
   -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.75); }
+
+#img-view {
+  transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+  -moz-transition: all 600ms ease-in-out;
+  -webkit-transition: all 600ms ease-in-out;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #ffbf00;
+  position: fixed !important;
+  z-index: 9000;
+  color: white; }
+
+.nip {
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+  -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+  top: 50%;
+  left: 50%;
+  height: 0%;
+  width: 0%; }
+  .nip p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 10px; }
+  .nip img {
+    transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    border-radius: 300px;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+    height: 50%;
+    width: 50%;
+    display: block !important;
+    margin: auto; }
+
+.expand-img-h img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 94% !important;
+  width: auto !important; }
+
+.expand-img-w img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 95% !important;
+  height: auto !important; }
+
+.expand {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  top: calc(0% + 60px );
+  left: 0%;
+  height: calc(100% - 100px ) !important;
+  width: 100%; }
 
 .check-line-city-0 {
   left: 6.25%; }
@@ -455,16 +521,7 @@ p:first-letter {
 
   #main {
     width: 96%;
-    margin: 0 2%; }
-
-  .fluid-li:active {
-    display: block !important;
-    position: fixed !important;
-    top: 60px;
-    width: 100%;
-    height: calc(100% - 105px) !important;
-    border: 5px solid #ff7518 !important;
-    z-index: 1000; } }
+    margin: 0 2%; } }
 @media all and (max-width: 768px) {
   .fluid-li {
     outline: none;
@@ -480,16 +537,7 @@ p:first-letter {
 
   #main {
     width: calc(100% - 20px );
-    margin: 0 10px; }
-
-  .fluid-li:active {
-    display: block !important;
-    position: fixed !important;
-    top: 60px;
-    width: 100%;
-    height: calc(100% - 105px) !important;
-    border: 5px solid #ff7518 !important;
-    z-index: 1000; } }
+    margin: 0 10px; } }
 .navbar-default {
   background: white;
   margin: 0; }

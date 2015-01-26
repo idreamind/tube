@@ -50,6 +50,12 @@ $H1: 620px
   -ms-box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
   box-shadow: 0 0 $RAD rgba($R,$G,$B,$A)
 
+@mixin boxShadowFly( $H: 15px, $L: 0 )
+  -webkit-box-shadow: $L $H 10px rgba(0,0,0,0.25)
+  -moz-box-shadow: $L $H 10px rgba(0,0,0,0.25)
+  -ms-box-shadow: $L $H 10px rgba(0,0,0,0.25)
+  box-shadow: $L $H 10px rgba(0,0,0,0.25)
+
 @mixin bigImg( $W: 100% )
   display: block !important
   position: fixed !important
@@ -59,6 +65,17 @@ $H1: 620px
   border: 5px solid $ORANGE !important
   z-index: 1000
 
+@mixin filterSaturate( $S: 150% )
+  -webkit-filter: saturate( $S )
+  filter: saturate( $S )
+
+@mixin scale( $S: 1.2 )
+  -webkit-transform: scale( $S, $S )
+  -moz-transform: scale( $S, $S )
+  -ms-transform: scale( $S, $S )
+  -o-transform: scale( $S, $S )
+  transform: scale( $S, $S )
+
 // Main: ------------------------------------------------------------------------------
 html, body, .wrapper, .fluid-ul
   @include simpleReset
@@ -67,6 +84,7 @@ html, body, .wrapper, .fluid-ul
   background: $WHITE
 
 body
+  @include transition( all 1s ease-in-out )
   padding-top: 60px
 
 nav
@@ -84,11 +102,16 @@ a
   color: $LIGHT-BLACK !important
   text-decoration: none !important
 
-@for $i from 1 through 12
-  .img-radio-#{$i}
-    background: url('../img/radio/radio%20(#{$i}).jpg') 50% 50% no-repeat
-    background-origin: padding-box
-    background-size: cover
+.img-radio
+  @include boxShadow( 10px )
+  @include selection( pointer )
+  @include transition( all 2s ease-in-out )
+  display: inline-block !important
+  width: 100%
+  height: auto
+  &:hover
+    @include filterSaturate
+    @include scale( 1.2 )
 
 .fluid-ul
   background: $YELLOW
@@ -104,7 +127,7 @@ a
 
 .fluid-li
   @include transition( all 500ms ease-in-out )
-  @include boxShadow( 6px, 0.75 )
+  @include boxShadow( 6px, 0.5 )
 
 .fluid-li-8
   @include widthHeightLine( 12.5%, 20px )
@@ -160,33 +183,34 @@ a
 .port
   @include transition
   @include selection
+  position: relative
   font-size: 18pt
   width: 100%
-  height: 100%
+  height: 110px
+  line-height: normal
   color: transparent
   &:hover
     color: $WHITE
-    background-color: rgba(0, 0, 0, 0.6)
+    background-color: rgba(0, 0, 0, 0.25)
   &:active
     color: transparent
     background-color: transparent
 
 .radio-title
-  line-height: normal
+  color: $WHITE !important
   font-size: 13pt
-  padding: 20px 0
+  padding: 10px 0
   text-transform: uppercase
 
 .radio-description
   @include transition
   font-size: 10.5pt
   padding: 10px 0
-  line-height: normal
   height: 40px
 
 .radio-line
+  color: $WHITE !important
   font-size: 16pt
-  line-height: normal
 
 .design-by
   vertical-align: top
@@ -305,7 +329,7 @@ a
 
 .expand
   @include borderRadius( 0px )
-  top: calc( 0% + 60px )
+  top: 60px
   left: 0%
   height: calc( 100% - 100px ) !important
   width: 100%
@@ -322,12 +346,12 @@ a
 
 // Contacts: -----------------------------------------------------------------------------
 .row-contacts
-  background: url("../img/radio/radio%20(7).jpg") 0 0
+  background: url("../img/radio/radio-(1).png") 0 0
   border-right: 5px solid $SKYPE !important
   border-left: 5px solid $WHITE !important
 
 .row-about
-  background: url("../img/radio/radio%20(7).jpg") 100% 100%
+  background: url("../img/radio/radio-(1).png") 100% 100%
   border-right: 5px solid $WHITE !important
   border-left: 5px solid $GREEN !important
 
@@ -403,6 +427,9 @@ p
   #main
     width: calc( 100% - 20px )
     margin: 0 10px
+  .img-radio
+    width: auto
+    height: calc( 100% - 110px )
 
 // Bootstrap: ------------------------------------------------------------------------------
 .navbar-default
@@ -437,3 +464,5 @@ p
 
 .success
   @include boxShadow( 7px, 0.8, 0, 221, 0 )
+
+// Angular: ------------------------------------------------------------------------------

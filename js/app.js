@@ -31,8 +31,8 @@
         $routeProvider
             .when( '/',          pageMain )
             .when( '/works',     pageMain )
-            .when( '/receivers', pageMain )
-            .when( '/devices',   pageMain )
+            .when( '/receiver', pageMain )
+            .when( '/device',   pageMain )
             .when( '/tesla',     pageMain )
             .when( '/contacts',  pageContacts )
             .when( '/author',    pageAuthor )

@@ -1,20 +1,20 @@
 <div id="main" class="wrapper">
-    <ul class="fluid-ul">
-        <li class="fluid-li fluid-li-animation img-radio-1"
-                                        ng-repeat="item in vw.itemsToView"
-                                        ng-class="item.imgClass"
-                                        ng-click="vg.setBigImg( item.src )">
+    <section class="fluid-ul">
+        <article class="fluid-li fluid-li-animation"
+                 ng-repeat="item in vw.itemsToView"
+                 ng-click="vg.setBigImg( item.src )">
+            <img src="{{item.src}}" class="img-radio" alt="{{item.title}}" title="{{item.title}}" draggable="true">
             <div class="port">
                 <div class="radio-title">
                     {{item.title}}
                 </div>
-                <div class="radio-line" ng-show="{{item.type == 'receivers'}}">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>
+                <div class="radio-line" ng-show="{{item.type == 'receiver'}}">&mdash;&emsp;<span class="fa fa-volume-up"></span>&emsp;&mdash;</div>
                 <div class="radio-line" ng-show="{{item.type == 'tesla'}}">&mdash;&emsp;<span class="fa fa-bolt"></span>&emsp;&mdash;</div>
-                <div class="radio-line" ng-show="{{item.type == 'devices'}}">&mdash;&emsp;<span class="fa fa-plug"></span>&emsp;&mdash;</div>
+                <div class="radio-line" ng-show="{{item.type == 'device'}}">&mdash;&emsp;<span class="fa fa-plug"></span>&emsp;&mdash;</div>
                 <div class="radio-description">
                     {{item.description}}
                 </div>
-                <span class="glyphicon glyphicon-fullscreen"></span>
             </div>
-    </ul>
+        </article>
+    </section>
 </div>
